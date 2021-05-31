@@ -118,7 +118,7 @@ var timerInterval:Timer?
         for i in 0..<cardsArray.count{
             if(cardsArray[i].flipped == true){
                 c = c + 1
-                if(c == 16){
+                if(c == cardsArray.count){
                     timerInterval?.invalidate()
                    return true
                 }
