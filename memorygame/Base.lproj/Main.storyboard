@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wmn-Hl-VjE">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--First Controller-->
+        <scene sceneID="9Kv-7e-SZa">
+            <objects>
+                <viewController id="wmn-Hl-VjE" customClass="FirstController" customModule="memorygame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rrx-IJ-Mml">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Memory Game" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYg-KZ-G8q">
+                                <rect key="frame" x="109" y="49" width="196.5" height="51.5"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KKW-gX-lSY">
+                                <rect key="frame" x="100" y="200.5" width="214" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <state key="normal" title="Normal">
+                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="NormalButtonClicked:" destination="wmn-Hl-VjE" eventType="touchUpInside" id="hqu-0C-CTS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gf3-9k-8of">
+                                <rect key="frame" x="100" y="330.5" width="214" height="30"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <state key="normal" title="Hard">
+                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="HardButtonClicked:" destination="wmn-Hl-VjE" eventType="touchUpInside" id="dYW-4r-Qz5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sah-1b-2zA">
+                                <rect key="frame" x="100" y="460.5" width="214" height="30"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <state key="normal" title="Top Ten">
+                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gqZ-cW-xTA"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="sah-1b-2zA" firstAttribute="top" secondItem="gf3-9k-8of" secondAttribute="bottom" constant="100" id="2LX-DN-l91"/>
+                            <constraint firstItem="gf3-9k-8of" firstAttribute="leading" secondItem="gqZ-cW-xTA" secondAttribute="leading" constant="100" id="8dK-0o-cbt"/>
+                            <constraint firstItem="sah-1b-2zA" firstAttribute="leading" secondItem="gqZ-cW-xTA" secondAttribute="leading" constant="100" id="BYW-gm-ofr"/>
+                            <constraint firstItem="gqZ-cW-xTA" firstAttribute="trailing" secondItem="KKW-gX-lSY" secondAttribute="trailing" constant="100" id="BuH-hI-w9Y"/>
+                            <constraint firstItem="KKW-gX-lSY" firstAttribute="top" secondItem="tYg-KZ-G8q" secondAttribute="bottom" constant="100" id="Gog-QZ-Nmi"/>
+                            <constraint firstItem="KKW-gX-lSY" firstAttribute="leading" secondItem="gqZ-cW-xTA" secondAttribute="leading" constant="100" id="NrY-QX-PrE"/>
+                            <constraint firstItem="gf3-9k-8of" firstAttribute="top" secondItem="KKW-gX-lSY" secondAttribute="bottom" constant="100" id="YyB-6l-lCl"/>
+                            <constraint firstItem="tYg-KZ-G8q" firstAttribute="centerX" secondItem="Rrx-IJ-Mml" secondAttribute="centerX" id="aCS-fv-zy2"/>
+                            <constraint firstItem="gqZ-cW-xTA" firstAttribute="trailing" secondItem="sah-1b-2zA" secondAttribute="trailing" constant="100" id="dzm-hg-J9B"/>
+                            <constraint firstItem="gqZ-cW-xTA" firstAttribute="trailing" secondItem="gf3-9k-8of" secondAttribute="trailing" constant="100" id="iqw-QC-OkU"/>
+                            <constraint firstItem="tYg-KZ-G8q" firstAttribute="top" secondItem="gqZ-cW-xTA" secondAttribute="top" constant="5" id="z4N-3n-tay"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="playHardButton" destination="gf3-9k-8of" id="Hhv-86-Qte"/>
+                        <outlet property="playNormalButton" destination="KKW-gX-lSY" id="sAs-EJ-NJL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n3u-sP-fA6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-886.95652173913049" y="73.660714285714278"/>
+        </scene>
+        <!--Collection View Controller-->
+        <scene sceneID="wZB-ct-CfY">
+            <objects>
+                <collectionViewController storyboardIdentifier="CollectionViewController" id="9IV-Gx-S5K" customClass="CollectionViewController" customModule="memorygame" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="isT-Ms-PuT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eZQ-ga-6Ht">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="50" height="200"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="jQ2-e0-YjT" customClass="CollectionViewCell" customModule="memorygame" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="75" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="cDk-lF-IIw">
+                                    <rect key="frame" x="0.0" y="0.0" width="75" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card4" translatesAutoresizingMaskIntoConstraints="NO" id="Hce-R1-EMQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="75" height="100"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                    <constraints>
+                                        <constraint firstItem="Hce-R1-EMQ" firstAttribute="top" secondItem="cDk-lF-IIw" secondAttribute="top" id="0YZ-rO-zhu"/>
+                                        <constraint firstItem="Hce-R1-EMQ" firstAttribute="leading" secondItem="cDk-lF-IIw" secondAttribute="leading" id="1mg-XP-ayO"/>
+                                        <constraint firstAttribute="bottom" secondItem="Hce-R1-EMQ" secondAttribute="bottom" id="3UU-5e-vrD"/>
+                                        <constraint firstAttribute="trailing" secondItem="Hce-R1-EMQ" secondAttribute="trailing" id="lGt-Z3-DBK"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <connections>
+                                    <outlet property="cardImage" destination="Hce-R1-EMQ" id="Cdd-CJ-eEv"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="FooterView" id="GPU-co-cWa" customClass="SectionFooter" customModule="memorygame" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="100" width="414" height="200"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1YK-Ri-Of3">
+                                    <rect key="frame" x="207" y="100" width="0.0" height="0.0"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="timer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I7k-CM-bKk">
+                                    <rect key="frame" x="187.5" y="133" width="39.5" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="1YK-Ri-Of3" firstAttribute="centerY" secondItem="GPU-co-cWa" secondAttribute="centerY" id="0wE-ih-AS9"/>
+                                <constraint firstItem="I7k-CM-bKk" firstAttribute="centerX" secondItem="GPU-co-cWa" secondAttribute="centerX" id="G7Y-E8-O7Y"/>
+                                <constraint firstItem="I7k-CM-bKk" firstAttribute="top" secondItem="1YK-Ri-Of3" secondAttribute="topMargin" constant="25" id="I1p-je-apy"/>
+                                <constraint firstItem="1YK-Ri-Of3" firstAttribute="centerX" secondItem="GPU-co-cWa" secondAttribute="centerX" id="guc-an-Ffx"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="sectionFooterlabel" destination="1YK-Ri-Of3" id="a5U-c7-qoW"/>
+                                <outlet property="timer" destination="I7k-CM-bKk" id="hWm-YL-CBt"/>
+                            </connections>
+                        </collectionReusableView>
+                        <connections>
+                            <outlet property="dataSource" destination="9IV-Gx-S5K" id="Epu-UF-KQO"/>
+                            <outlet property="delegate" destination="9IV-Gx-S5K" id="bKc-CU-7qj"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Dz-p0-NC4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-123.18840579710145" y="76.339285714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="card4" width="75" height="100"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,10 +1,3 @@
-//
-//  CollectionViewController.swift
-//  memorygame
-//
-//  Created by user196688 on 5/4/21.
-//
-
 import UIKit
 
 private let reuseIdentifier = "Cell"
@@ -135,7 +128,7 @@ var timerInterval:Timer?
         }
         return false
     }
-//MARK: Thread that count seconds
+    //MARK: Thread that count seconds
     @objc func action(){
         sectionFooterr!.timer.text = "timer: \(timer+1)"
         timer = timer + 1
