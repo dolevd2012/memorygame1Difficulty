@@ -30,9 +30,11 @@ var timerInterval:Timer?
         
 
     }
+    //MARK: number of cells in the page
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return cardsArray.count
     }
+    //MARK: create a custom cell for all cells
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         var cell = UICollectionViewCell()
@@ -46,6 +48,7 @@ var timerInterval:Timer?
         
         return cell
     }
+    //MARK: adding the footer to the UICollectionView
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
             
             if let sectionFooter = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "FooterView", for: indexPath)as? SectionFooter{
@@ -59,7 +62,7 @@ var timerInterval:Timer?
         /// Normally should never get here
         return UICollectionReusableView()
     }
-    
+    //MARK: adding click event for each cell and adding logic
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let currentcell = collectionView.cellForItem(at: indexPath)as! CollectionViewCell
@@ -113,6 +116,7 @@ var timerInterval:Timer?
         }
         
     }
+    //MARK: Adding end logic to the game
     func checkGameOver() -> Bool{
         var c : Int = 0
         for i in 0..<cardsArray.count{
@@ -127,6 +131,7 @@ var timerInterval:Timer?
         }
         return false
     }
+    //MARK: Thread that count seconds
     @objc func action(){
         sectionFooterr!.timer.text = "timer: \(timer+1)"
         timer = timer + 1
