@@ -1,10 +1,3 @@
-//
-//  CollectionViewController.swift
-//  memorygame
-//
-//  Created by user196688 on 5/4/21.
-//
-
 import UIKit
 
 private let reuseIdentifier = "Cell"
